@@ -14,7 +14,7 @@ typedef struct formatter formatter;
 struct formatter {
 	FILE *fp;
 	void (*header)(formatter*, char*);
-	void (*body)(formatter*, char*);
+	void (*body)(formatter*, char*); // *** Tilføj body funktion til headerfil
 	void (*preamble)(formatter*, char*);
 	void (*postamble)(formatter*, char*);
 	void (*release)(formatter*);

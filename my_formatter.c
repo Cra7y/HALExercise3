@@ -35,12 +35,12 @@ int main(int narg, char *argp[]) {
 
   formatter text; // Allocation of objects
 
-  formatter_init(&text, html_init, "/dev/tty"); // Current TTY device
+  formatter_init(&text, html_init, "/dev/tty"); // Current TTY device *** text_init er ændret til html_init
 
   /* Use of formatters methods */
   text.preamble(&text, "Start of formatted text");
   text.header(&text, header);
-  text.body(&text, body);
+  text.body(&text, body); // *** Kør ny body funktion
   text.postamble(&text, "thanks folks");
 	
   formatter_release(&text);

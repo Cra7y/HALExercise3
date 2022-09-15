@@ -31,7 +31,7 @@ void html_header(formatter *cthis, char* string){
 	fprintf(cthis->fp, "<H1>%s</H1>\n", string);
 }
 
-void html_body(formatter *cthis, char* string){
+void html_body(formatter *cthis, char* string){ // *** Implementer body funktionen for html
 	fprintf(cthis->fp, "<p>%s</p>\n", string);
 }
 
@@ -43,7 +43,7 @@ const struct formatter html_formatter =
 {
     .header    = html_header,
     .preamble  = html_preamble,
-	.body	   = html_body,
+	.body	   = html_body, // *** Registrer at body filen eksisterer
     .postamble = html_postamble,
     .release   = html_release,
 };
